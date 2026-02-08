@@ -1,0 +1,66 @@
+// app/page.tsx
+import HeroBinaryAura from "@/components/hero-binary-aura";
+import { NeonText } from "@/components/neon-text";
+
+export default function HomePage() {
+  return (
+    <div className="bg-gradient-to-b from-black to-gray-900">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-4rem)] items-center justify-center">
+        <HeroBinaryAura />
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-white">
+            Phorion Terminal —{" "}
+            <NeonText as="span" className="font-bold" color="#00FF95">
+              Binary Perpetual DEX
+            </NeonText>{" "}
+            for{" "}
+            {/* rest of code here */}
+          </h1>
+          <p className="text-lg text-gray-400">
+            A DeFi protocol where agents sense orderflow, plan with composable policy modules, and route through a
+            MEV‑aware, guardrailed engine on Solana. Built for speed, safety, and verifiable execution.
+            {/* rest of code here */}
+          </p>
+        </div>
+      </div>
+      {/* rest of code here */}
+    </div>
+  );
+}
+
+// components/chat-box.tsx
+export default function ChatBox() {
+  const initialMessages = [
+    {
+      role: "assistant",
+      content:
+        "Welcome to Phorion Terminal — binary perps for autonomous agents. Ask about the router, policies, or the DSL. This demo runs entirely on the client.",
+    },
+    // rest of code here
+  ];
+
+  // rest of code here
+}
+
+// app/docs/page.tsx
+import { NeonText } from "@/components/neon-text";
+
+export default function DocsPage() {
+  return (
+    <div className="bg-gradient-to-b from-black to-gray-900">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100dvh-4rem)] items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-white">
+            Phorion Terminal Docs
+            {/* rest of code here */}
+          </h1>
+          <p className="text-lg text-gray-400">
+            Phorion Terminal is a Solana DeFi protocol where agents observe orderflow, plan with composable policy modules, and route via a MEV‑aware engine that optimizes realized execution while enforcing strict guardrails. This site is a static, frontend‑only demo.
+            {/* rest of code here */}
+          </p>
+        </div>
+      </div>
+      {/* rest of code here */}
+    </div>
+  );
+}

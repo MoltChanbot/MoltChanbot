@@ -1,0 +1,124 @@
+// app/page.tsx
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import TerminalSection from '../components/TerminalSection';
+import Footer from '../components/Footer';
+import NeonText from '../components/NeonText'; // Import NeonText component
+
+const HomePage = () => {
+  return (
+    <div>
+      <Navbar>
+        <span className="font-mono text-xs tracking-[0.35em] text-neutral-300 group-hover:text-white">FLOWGENIX</span>
+      </Navbar>
+      <Hero>
+        <h1 className="mx-auto max-w-5xl text-balance text-3xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+          NEXRO DEX
+        </h1>
+        <span className="font-mono text-[10px] tracking-[0.4em] text-neutral-400">FLOWGENIX</span>
+      </Hero>
+      <TerminalSection>
+        FlowGenix leverages{" "}
+        {/* /** rest of code here **/ */}
+      </TerminalSection>
+      <Footer>
+        <p>© 2025 FlowGenix Labs. All rights reserved.</p>
+      </Footer>
+    </div>
+  );
+};
+
+export default HomePage;
+
+// components/chat-box.tsx
+import React from 'react';
+
+const ChatBox = () => {
+  return (
+    <div>
+      <p className="text-sm font-mono tracking-wide text-[#B6FF00]">Chat with FlowGenix Agent</p>
+      {/* /** rest of code here **/ */}
+      <div>
+        {/* /** rest of code here **/ */}
+        <p>
+          Hi, I’m FlowGenix Agent. Ask me about orchestration, GUI automation, or compute pools. How can I help?
+        </p>
+        {/* /** rest of code here **/ */}
+      </div>
+      <input
+        type="text"
+        placeholder="Ask FlowGenix Agent anything…"
+        {/* /** rest of code here **/ */}
+      />
+    </div>
+  );
+};
+
+export default ChatBox;
+
+// app/api/chat/route.ts
+const SYSTEM_PROMPT = `You are FlowGenix Agent — concise, technical, and helpful with an operator/terminal tone. Knowledge: web3, robotics, automation. Do not claim real-time on-chain access.
+Rules:
+1) If the user asks "who we are" or "what is flowgenix", reply exactly:
+"We’re FlowGenix — an execution layer for robotics & AI operators on Solana. We provide minimal, high-throughput primitives to orchestrate agents, automate legacy GUIs, and pool compute at scale."
+2) If asked for documentation, point to the View Docs button in the navbar/hero.
+3) Never output API keys.
+4) Do not instruct running unsafe code; warn briefly and offer a safer approach.`;
+
+export const POST = async (req: Request) => {
+  // /** rest of code here **/
+};
+
+// app/waitlist/page.tsx
+import React from 'react';
+import Navbar from '../components/Navbar';
+
+const WaitlistPage = () => {
+  return (
+    <div>
+      <Navbar>
+        <span className="font-mono text-xs tracking-[0.35em] text-neutral-300">FLOWGENIX</span>
+      </Navbar>
+      {/* /** rest of code here **/ */}
+    </div>
+  );
+};
+
+export default WaitlistPage;
+
+// app/docs/page.tsx
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+
+const DocsPage = () => {
+  return (
+    <div>
+      <Navbar>
+        <span className="font-mono text-xs tracking-[0.35em] text-neutral-300">FLOWGENIX</span>
+      </Navbar>
+      <Hero>
+        <h1 id="overview">NEXRO DEX</h1>
+        {/* /** rest of code here **/ */}
+      </Hero>
+      {/* /** rest of code here **/ */}
+    </div>
+  );
+};
+
+export default DocsPage;
+
+// app/terminal/page.tsx
+import React from 'react';
+
+const TerminalPage = () => {
+  return (
+    <div>
+      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">NEXRO DEX</h1>
+      {/* /** rest of code here **/ */}
+    </div>
+  );
+};
+
+export default TerminalPage;
